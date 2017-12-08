@@ -18,7 +18,16 @@ var numberToOutput = function(numberInput) {
         return "Beep!";
       }
     }
-  }
+    for (var i=0; i<numbersArray.length; i++) { //second loop
+      if (numberInput === ones[i]) {
+        return "Boop!";
+      }
+    }
+    for (var i=0; i<numbersArray.length; i++) { //third loop
+      if (numberInput ===  divisableByThree[i]) {
+        return "I'm sorry Dave. I'm afraid I can't do that!";
+      }
+    }
   return result;
 }
 
