@@ -1,5 +1,6 @@
 .jumbotron {
   text-align: center;
+  background-image: url("http://blugloss.com/wp-content/uploads/2017/07/illustration10.jpg");
 }
 body {
   padding: 30px;
@@ -11,6 +12,7 @@ body {
 
 .btn {
   text-align: center;
+
 }
 
 #result {
