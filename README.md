@@ -11,10 +11,10 @@ _This webpage is meant to display the use of BDD using loops and JavaScript arra
 ### Specs
 | Behavior | Input | Output |
 | :-------------     | :------------- | :------------- |
-| return first input | 1 | "Boop!" |
+| it can count up to the provided number | 2 | 1,2 |
 | not a number | p | error |
 | a value that is equal to a specific result | 0 | "Beep!" |
-| the return is divisible by three  | 6 | "I'm sorry Dave. I'm afraid I can't do that!" |
+| it returns a message to numbers divisible by three | 6 | "I'm sorry Dave. I'm afraid I can't do that!" |
 | cannot count higher than 30 | 40 | error |
 
 
