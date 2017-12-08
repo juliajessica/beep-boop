@@ -1,6 +1,6 @@
 //business logic
 var numberToOutput = function(personInputConverter) {
-  personInput = parseInt(personInput);
+  personInput = parseInt(personInputConverter);
   var numbersArray = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"];
   var zeros = ["0", "10", "20"];
   var ones = ["1","11","21"];
@@ -14,17 +14,18 @@ var numberToOutput = function(personInputConverter) {
       return "Error, I cant count that high!"; //number over 30
   }
   else {
-    for (var i=0; i<numbersArray.length; i++) { //first loop
+    for (var i = 0; i < numbersArray.length; i++) { //first loop
       if (personInput === zeros[i]) {
-        return "Beep!";
+        $(".result").text("Beep");
+        //return "Beep!";
       }
     }
-    for (var i=0; i<numbersArray.length; i++) { //second loop
+    for (var i = 0; i < numbersArray.length; i++) { //second loop
       if (personInput === ones[i]) {
         return "Boop!";
       }
     }
-    for (var i=0; i<numbersArray.length; i++) { //third loop
+    for (var i = 0; i < numbersArray.length; i++) { //third loop
       if (personInput === divisableByThree[i]) {
         return "I'm sorry Dave. I'm afraid I can't do that!";
       }
