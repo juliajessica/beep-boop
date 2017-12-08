@@ -38,7 +38,7 @@ $(document).ready(function() {
       $("#result").text(result)  //send result to user
     }
     else {
-      $("#result").text("Not a number!") debugger;
+      $("#result").text("I can't count that high!") debugger;
     }
   });
 });
