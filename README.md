@@ -11,13 +11,11 @@ _This webpage is meant to display the use of BDD using loops and JavaScript arra
 ### Specs
 | Behavior | Input | Output |
 | :-------------     | :------------- | :------------- |
-| return first symbol | 1 | I |
+| return first input | 1 | "Boop!" |
 | not a number | p | error |
-| a value that is equal to a single roman numeral | 100 | C |
-| the return is a multiple digit roman numeral , using adding | 90 | LXXXX |
-| the return is a multiple digit roman numeral, using subtraction | 90 | XC |
-| separate ones, tens, hundreds, and thousands | 99 | XCIX |
-| cannot count higher than 3,999 | 4000 | error |
+| a value that is equal to a specific result | 0 | "Beep!" |
+| the return is divisible by three  | 6 | "I'm sorry Dave. I'm afraid I can't do that!" |
+| cannot count higher than 30 | 40 | error |
 
 
 ## Setup/Installation Requirements

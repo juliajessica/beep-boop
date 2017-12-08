@@ -9,6 +9,10 @@ body {
   text-align: center;
 }
 
-.button {
+.btn {
   text-align: center;
+}
+
+.outputResults {
+  display:none;
 }
