@@ -61,27 +61,3 @@ debugger;
     }
   });
 });
-
-
-
-
-      // var result= "";
-// var str = "";
-// var subtract1 = str.subtr(1) //subtract first number
-// var subtract2 = str.subtr(2) //subtract second number
-
-// //var beepBoopArray = function(number) {
-//   if (number)
-// }
-
-// return numbers[i];
-// }  else {
-//   return false;
-// } return results;
-// //
-// function checkInput(input) {
-
-
-
-//    }
-// }
