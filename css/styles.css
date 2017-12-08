@@ -5,3 +5,10 @@ body {
   padding: 30px;
   margin: 30px;
 }
+.container {
+  text-align: center;
+}
+
+.button {
+  text-align: center;
+}
