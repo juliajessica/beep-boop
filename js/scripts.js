@@ -1,34 +1,34 @@
 //business logic
-var numberToOutput = function(personInputConverter) {
-  personInput = parseInt(personInputConverter);
+var numberToOutput = function(userInputNumber) {
+  personInput = parseInt(userInputNumber);
   var numbersArray = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"];
   var zeros = ["0", "10", "20"];
   var ones = ["1","11","21"];
   var divisableByThree = ["3", "6", "9", "12", "15", "18", "21", "23", "26", "29"];
-  var result = "";
+  var result = [];
 
 
-  if (!(personInputConverter.match(/[0-9]/))) { //number over 30
+  if (!(userInputNumber.match(/[0-9]/))) { //number over 30
     return "Error!"; //not a number
-  } else if (personInput > 30) {
+  } else if (userInputNumber > 30) {
     $(".result").text("Error, I cant count that high!");
       // return "Error, I cant count that high!";
   }
   else {
     for (var i = 0; i < numbersArray.length; i++) { //first loop
-      if (personInput === zeros[i]) {
+      if (userInputNumber === zeros[i]) {
         $(".result").text("Beep!").show();
         //return "Beep!";
       }
     }
     for (var i = 0; i < numbersArray.length; i++) { //second loop
-      if (personInput === ones[i]) {
+      if (userInputNumber === ones[i]) {
         $(".result").text("Boop!").show();
         // return "Boop!";
       }
     }
     for (var i = 0; i < numbersArray.length; i++) { //third loop
-      if (personInput === divisableByThree[i]) {
+      if (userInputNumber === divisableByThree[i]) {
         $(".result").text("I'm sorry Dave. I'm afraid I can't do that!").show();
         // return "I'm sorry Dave. I'm afraid I can't do that!";
       }
@@ -38,13 +38,13 @@ var numberToOutput = function(personInputConverter) {
   }
 }
 
-// function checkInput(input) {
-//   if (input.match(/[0-9]/)) {
-//     return true;
-// }  else {
-//     return false;
-//   }
-// }
+function checkInput(input) {
+  if (input.match(/[0-9]/)) {
+    return true;
+}  else {
+    return false;
+  }
+}
 
 ///user interface logic
 
