@@ -51,8 +51,8 @@ var numberToOutput = function(personInputConverter) {
 $(document).ready(function() {
   $("form#beepboop").submit(function(event) {
     event.preventDefault();
-    var result = parseInt($("input#result").val());
-    var output = numberToOutput(result);
+    var userInputNumber = parseInt($("input#userInputNumber").val());
+    var output = numberToOutput(userInputNumber);
 
 $(".result").text(output);
 
