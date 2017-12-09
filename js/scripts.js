@@ -8,57 +8,64 @@ var numberToOutput = function(personInputConverter) {
   var result = "";
 
 
-  if (!(personInputConverter.match(/[0-9]/))) {
+  if (!(personInputConverter.match(/[0-9]/))) { //number over 30
     return "Error!"; //not a number
   } else if (personInput > 30) {
-      return "Error, I cant count that high!"; //number over 30
+    $(".result").text("Error, I cant count that high!");
+      // return "Error, I cant count that high!";
   }
   else {
     for (var i = 0; i < numbersArray.length; i++) { //first loop
       if (personInput === zeros[i]) {
-        $(".result").text("Beep");
+        $(".result").text("Beep!").show();
         //return "Beep!";
       }
     }
     for (var i = 0; i < numbersArray.length; i++) { //second loop
       if (personInput === ones[i]) {
-        return "Boop!";
+        $(".result").text("Boop!").show();
+        // return "Boop!";
       }
     }
     for (var i = 0; i < numbersArray.length; i++) { //third loop
       if (personInput === divisableByThree[i]) {
-        return "I'm sorry Dave. I'm afraid I can't do that!";
+        $(".result").text("I'm sorry Dave. I'm afraid I can't do that!").show();
+        // return "I'm sorry Dave. I'm afraid I can't do that!";
       }
     }
-    return result;
+    // return result;
+    $(".result")
   }
 }
 
-function checkInput(input) {
-  if (input.match(/[0-9]/)) {
-    return true;
-}  else {
-    return false;
-  }
-}
+// function checkInput(input) {
+//   if (input.match(/[0-9]/)) {
+//     return true;
+// }  else {
+//     return false;
+//   }
+// }
 
 ///user interface logic
 
 $(document).ready(function() {
   $("form#beepboop").submit(function(event) {
     event.preventDefault();
+    var result = parseInt($("input#result").val());
+    var output = numberToOutput(result);
 
+$(".result").text(output);
 
-    var personInput = $("#userInputNumber").val();
-    var checker = checkInput(personInput)
-
-    if (checker === true) {
-debugger;
-      var result = numberToOutput(personInput); //box containing input
-      $("#result").text(result)  //send result to user
-    }
-    else {
-      $("#result").text("I can't count that high!")
-    }
+//     var personInput = $("#userInputNumber").val();
+//     var checker = checkInput(personInput)
+//
+//     if (checker === true) {
+// debugger;
+//       var result = numberToOutput(personInput); //box containing input
+//       $("#result").text(result)  //send result to user
+//     }
+//     else {
+//       $(".result").text("I can't count that high!")
+//     }
   });
 });
