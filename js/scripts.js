@@ -6,35 +6,30 @@ var numberToOutput = function(userInputNumber) {
   var ones = [1,11,21];
   var divisableByThree = [3, 6, 9, 12, 15, 18, 21, 23, 26, 29];
   var result = [];
-  debugger;
-
 
   // if ((userInputNumber.contains(^/[0-9]/))) { //number over 30
-  //
 
-  //   return "Error!"; //not a number
-   if (userInputNumber > 30) {
-    $(".result").text("Error, I cant count that high!");
-      // return "Error, I cant count that high!";
-  } else if {
-    for (var i = 0; i < userInputNumber.length; i++) { //first loop
-      if (userInputNumber === zeros[i]) {
-        $(".result").text("Beep!").show();
-        //return "Beep!";
-      }
-    // } for (var i = 0; i < numbersArray.length; i++) { //second loop
-      if (userInputNumber === ones[i]) {
-        $(".result").text("Boop!").show();
+  for (var i = 0; i <= userInputNumber.length; i++) {
+    numberArray.push(i);
+  }
+
+  for (var i = 0; i < userInputNumber.length -1; i++) { //first loop
+    if (userInputNumber === zeros[i]) { //return "Beep!";
+      numbersArray = "Beep!";
+      // console.log("beeppboop");
+      // debugger;
+    } else if (userInputNumber === ones[i]) { //second loop
+      numbersArray = "Boop!";
         // return "Boop!";
-      }
-    // } for (var i = 0; i < numbersArray.length; i++) { //third loop
-      if (userInputNumber === divisableByThree[i]) {
-        $(".result").text("I'm sorry Dave. I'm afraid I can't do that!").show();
-        console.log(result);
+    } else if (userInputNumber === divisableByThree[i]) { //third loop
+      numbersArray = "I'm sorry Dave. I'm afraid I can't do that!";
+        //console.log(result);
         // return "I'm sorry Dave. I'm afraid I can't do that!";
-      }
+    } else if (userInputNumber > 30) {
+      numbersArray = "Error, I cant count that high!";
     }// return result;
   }
+  return numberArray;
 }
 
 function checkInput(input) {
@@ -50,21 +45,19 @@ function checkInput(input) {
 $(document).ready(function() {
   $("form#beepboop").submit(function(event) {
     event.preventDefault();
-    var userInputNumber = parseInt($("input#userInputNumber").val());
-    var output = numberToOutput(userInputNumber);
+    var finalNumber = parseInt($("input#userInputNumber").val());
+    var output = numberToOutput(finalNumber);
 
-    $("<li>" + output + "</li>").appendTo(".result");
+    if (finalNumber = 0 || finalNumber = 10 || finalNumber = 20) {
+      $(".result").text(output);
+    } else (finalNumber = 1 || finalNumber = 11 || finalNumber = 21) {
+      $(".result").text(output);
+    } else (finalNumber = 3 || finalNumber = 6 || finalNumber = 9 || finalNumber = 12 || finalNumber = 15 || finalNumber = 18 || finalNumber = 21 || finalNumber = 23 || finalNumber = 26 || finalNumber = 29) {
+      $(".result").text(output);
+    }
 
-//     var personInput = $("#userInputNumber").val();
-//     var checker = checkInput(personInput)
-//
-//     if (checker === true) {
-// debugger;
-//       var result = numberToOutput(personInput); //box containing input
-//       $("#result").text(result)  //send result to user
-//     }
-//     else {
-//       $(".result").text("I can't count that high!")
-//     }
+    // $("<li>" + output + "</li>").appendTo(".result");
+    // $(".result").text("Beep!").push();
+
   });
 });
