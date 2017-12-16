@@ -1,18 +1,6 @@
 //business logic
 var numberToOutput = function(userInputNumber) {
-
-  // var numbersArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
-  // var zeros = [0, 10, 20];
-  // var ones = [1,11,21];
-  // var divisableByThree = [3, 6, 9, 12, 15, 18, 21, 23, 26, 29];
-
   var result = [];
-
-  // if ((userInputNumber.contains(^/[0-9]/))) { //number over 30
-
-  // for (var i = 0; i <= userInputNumber.length; i++) {
-  //   numberArray.push(i);
-  // }
 
   for (var i = 2; i < userInputNumber.length -1; i++) { //first loop
     if (userInputNumber.toString().includes("0") ) {
@@ -20,8 +8,8 @@ var numberToOutput = function(userInputNumber) {
     } else if (userInputNumber.toString().includes("1") { //second loop
       results.push("Boop!");
         // return "Boop!";
-    } else if () { //modulo needs to operate on a number
-        results.push();
+    } else if (userInputNumber.string().includes() { //modulo needs to operate on a number
+        results.push("I'm sorry Dave. I'm afraid I can't do that!");
     }
     else {
       results.push(i); //no other case is true, push number!
