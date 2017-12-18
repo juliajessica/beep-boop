@@ -31,7 +31,6 @@ $(document).ready(function() {
 
     $("#userResult").last().click(function() { //clickable
     $("#userResult").empty();
-
-    })
+    });
   });
 });
